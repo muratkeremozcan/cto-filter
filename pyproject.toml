@@ -1,0 +1,16 @@
+[project]
+name = "cto-filter"
+version = "0.0.0"
+description = "Contract tests for the cto-filter skill and communication-filter subagent"
+requires-python = ">=3.11"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest>=8", "pyyaml>=6"]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"

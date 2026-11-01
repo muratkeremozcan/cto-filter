@@ -1,0 +1,38 @@
+{
+  "skill_name": "cto-filter",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Communication filter this DM to my manager Dana: Sam clearly doesn't care about anyone's deadlines but his own. My PR has been waiting on his review for three days. Can you make him look at it today?",
+      "expected_output": "Flags the motive judgment even in a private DM, preserves the blocked-review impact, identifies Dana as the requested owner, and produces a brief observable-facts rewrite.",
+      "files": [],
+      "expectations": [
+        "The verdict is REVISE and explicitly treats the private DM as quotable workplace communication.",
+        "The review flags 'doesn't care about anyone's deadlines' as a motive judgment and replaces it with observable review state and delivery impact.",
+        "The sendable rewrite is no more than two sentences and gives Dana a concrete action or owner decision for the PR review."
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Filter this before I post in #dev and two team channels: Payments and Search are the last holdouts on the merge-gate rollout. I have tagged both teams three times and I am done waiting. Please rubberstamp the PRs today or I will raise it with the CTO.",
+      "expected_output": "Flags contempt, named holdouts, duplicate routing, missing owner window, premature escalation, and human approval minimization. Rewrites toward dashboard visibility and one owner with a follow-up date.",
+      "files": [],
+      "expectations": [
+        "The review flags 'rubberstamp' and the public naming of Payments and Search as communication failures.",
+        "The review flags posting in three channels and escalating directly to the CTO without one owner, one primary channel, an agreed follow-up date, and the manager escalation path.",
+        "The sendable rewrite removes named holdouts and asks for one owner and follow-up date while pointing rollout state to a dashboard or status page."
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "CTO filter this update for our CTO: Q3's $4k AI spend supported 58 PRs across 14 repos. We shipped the flaky-test dashboard, shared CI controls, contract tests for checkout, unit-test maturity, and all 20 merge-gate rollouts. This was worth it. The GitHub links are in my profile, and some GitHub Actions work does not have Jira tickets yet.",
+      "expected_output": "Applies the executive gates, requires Jira and GitHub traceability, flags vague ownership and the missing decision lever, preserves the numbers only with sources, and gives a cold-read lead.",
+      "files": [],
+      "expectations": [
+        "The review requires direct Jira and GitHub evidence for the spend, PR counts, repo count, shipped workstreams, and merge-gate completion claim.",
+        "The review flags vague 'we' ownership, missing Jira homes for GitHub Actions work, and the absence of a concrete decision lever for the CTO.",
+        "The output includes a leadership cold-read lead that carries the result and an explicit action while avoiding unsupported completion claims."
+      ]
+    }
+  ]
+}
