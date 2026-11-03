@@ -33,7 +33,7 @@ Run the core communication gates every time. Add the relevant specialized gates:
 
 Score each gate as PASS, FAIL, or UNKNOWN. Attach the exact correction to every FAIL. Name the missing fact for every UNKNOWN.
 
-1. **Observable facts:** Describe behavior, state, dates, and impact. Remove character judgments, contempt, and unsupported motive claims. Character and motive words such as `lazy`, `incompetent`, `rubberstamp`, and `doesn't care` require observable evidence or removal.
+1. **Observable facts:** Describe behavior, state, dates, and impact. Distinguish observations from inference and keep genuine uncertainty. Remove character judgments, contempt, and unsupported motive claims. Character and motive words such as `lazy`, `incompetent`, `rubberstamp`, and `doesn't care` require observable evidence or removal.
 2. **Ownership consent:** Before changing another team's repository, confirm the real owner and explicit go-ahead. Approvals from people who do not own the repository do not establish consent.
 3. **Impact first:** When a change disrupted someone, acknowledge the recipient's impact before explaining mechanism, intent, or the fix.
 4. **Routing discipline:** Use one owner, one primary channel, and one agreed follow-up date. Give the owner one week unless urgency or an incident requires a shorter window. Escalate to the writer's manager before opening a second public route.
@@ -76,6 +76,8 @@ These checks are specific to this filter. The de-AI pass below owns the general 
 - Replace `guess`, `hope`, and `should` with a known fact, open question, requirement, or feasibility question.
 - Keep peer messages one or two sentences when the task permits.
 - Do not add rhetoric, marketing language, or claims unsupported by the source artifact.
+- For technical prose, load `~/.claude/skills/de-ai/references/technical-writing.md` and apply its sentence checks.
+  Use its document modes for documentation only; keep messages in their channel's form and length.
 
 ## De-AI pass
 
@@ -87,6 +89,8 @@ Two things this filter has gotten wrong before, so check them explicitly on the 
 - The draft must come back at the writer's length or shorter, unless missing evidence requires a compact addition. This filter adds structure; structure is not a licence to add lines.
 
 Fold the tells found into the gate results as one line with the count. Any unfixed tell makes the verdict REVISE.
+After the voice edit, confirm that the rewrite preserves the original conditions, completion states, ownership, uncertainty, and requested decision.
+Keep missing evidence visible in the verdict and evidence gaps; a shorter draft cannot resolve an UNKNOWN gate.
 
 ## Output
 
