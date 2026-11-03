@@ -17,6 +17,8 @@ the `de-ai` voice pass and returns a READY, REVISE or STOP verdict with a sendab
   and `~/.claude/skills/de-ai/references/murat-voice.md` by absolute path, so `de-ai` must be
   installed at `~/.claude/skills/de-ai`. It lives in its own repository,
   `muratkeremozcan/de-ai`.
+  For technical prose, it also loads `~/.claude/skills/de-ai/references/technical-writing.md`.
+  Update the companion checkout with this change.
 
 ## Install
 
